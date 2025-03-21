@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+:root {
+    --primary-color: #8263a3;
+    --text-dark: #232637;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #dbdce0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Estilos do header */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+.nav__links a:hover {
+    color: var(--primary-color);
+}
+
+.nav__links a svg {
+    fill: var(--text-dark);
+    transition: 0.3s;
+}
+
+.nav__links a:hover svg {
+    fill: var(--primary-color);
+}
+
+.nav__links .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* Estilos da Seção de Login */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 80px 20px; /* Ajuste o padding para não sobrepor o header */
+    background-color: var(--white);
+    flex: 1;
+}
+
+.login-container {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+}
+
+.login-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #7e53b3;
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login-links a {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-links a:hover {
+    color: #7e53b3;
+}
+
+
+
+
+
+/* Estilos do footer */
+footer {
+    background-color: rgba(35, 38, 55, 0.8);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    backdrop-filter: blur(5px);
+    border-top: none;
+}
+
+footer p {
+    margin: 0;
+}

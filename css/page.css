@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+:root {
+    --primary-color: #8263a3;
+    --text-dark: #232637;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #dbdce0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Estilos do header */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+.nav__links a:hover {
+    color: var(--primary-color);
+}
+
+.nav__links a svg {
+    fill: var(--text-dark);
+    transition: 0.3s;
+}
+
+.nav__links a:hover svg {
+    fill: var(--primary-color);
+}
+
+.nav__links .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* Product Section Styles */
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 120px 20px 20px 20px; /* Adjust padding to ensure it doesn't overlap with header */
+    gap: 30px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    flex: 1;
+}
+
+.product-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.product-image {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-image .main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.small-img-col {
+    width: 18%;
+}
+
+.small-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.small-img:hover {
+    transform: scale(1.1);
+}
+
+.product-details {
+    width: 55%;
+}
+
+.product-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.size-selection, .quantity-selection {
+    margin-bottom: 20px;
+}
+
+.size-selection label, .quantity-selection label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.size-select, #quantity-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #7e53b3;
+}
+
+.product-details-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 30px;
+    color: var(--text-dark);
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+
+
+/* Estilos da Seção de Obras Relacionadas */
+.related-works {
+    padding: 40px 20px;
+    background-color: var(--white);
+    margin-top: 40px;
+}
+
+.related-works__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.related-works__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.related-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.related-card__image {
+    width: 100%; /* Largura fixa */
+    height: 200px; /* Altura fixa */
+    object-fit: cover; /* Corta a imagem para caber no espaço */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.related-card__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.related-card__description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.related-card__price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Estilos do footer */
+footer {
+    background-color: rgba(35, 38, 55, 0.8);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    backdrop-filter: blur(5px);
+    border-top: none;
+}
+
+footer p {
+    margin: 0;
+}
